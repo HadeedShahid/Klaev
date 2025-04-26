@@ -5,19 +5,16 @@ import { z } from "zod";
 import {
   Form,
   FormControl,
-  FormDescription,
   FormField,
   FormItem,
-  FormLabel,
   FormMessage,
 } from "@/components/ui/form";
 import { Button } from "./ui/button";
-import { ArrowRight, Loader2, Mail, Phone } from "lucide-react";
+import { Loader2, Mail, Phone } from "lucide-react";
 import { Input } from "./ui/input";
 import { toast } from "sonner";
 import { useState } from "react";
 import { createSignup } from "@/actions/signups";
-import { PhoneInput } from "./ui/phoneInput";
 
 const WaitListForm = () => {
   const [loading, setLoading] = useState(false);
