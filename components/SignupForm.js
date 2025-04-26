@@ -12,7 +12,7 @@ const SignupForm = () => {
     e.preventDefault();
     toast({
       title: "Welcome to KLAEV",
-      description: "You'll receive a 15% discount code when we launch.",
+      description: "You'll receive a 10% discount code when we launch.",
     });
     setEmail("");
     setPhone("");
@@ -46,7 +46,7 @@ const SignupForm = () => {
         type="submit"
         className="w-full bg-neutral-900 hover:bg-neutral-800 text-white"
       >
-        Get 15% Off
+        Get 10% Off
       </Button>
     </form>
   );

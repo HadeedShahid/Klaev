@@ -2,8 +2,11 @@
 import { useState, useEffect } from "react";
 
 const images = [
-  "https://images.unsplash.com/photo-1649972904349-6e44c42644a7",
-  "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+  "/image-1.jpg",
+  "/image-2.jpg",
+  "/image-3.jpg",
+  "/image-4.jpg",
+  "/image-5.jpg",
 ];
 
 const ImageCarousel = () => {

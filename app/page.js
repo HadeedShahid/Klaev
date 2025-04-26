@@ -1,10 +1,11 @@
 import ImageCarousel from "@/components/ImageCarousel";
 import CountdownTimer from "@/components/CountdownTimer";
 import SignupForm from "@/components/SignupForm";
+import Image from "next/image";
 
 const Index = () => {
   return (
-    <div className="min-h-screen w-full flex flex-col md:flex-row font-poppins">
+    <div className="min-h-screen w-full flex flex-col-reverse md:flex-row font-poppins">
       <div className="w-full md:w-1/2 h-screen">
         <ImageCarousel />
       </div>
@@ -12,7 +13,12 @@ const Index = () => {
       <div className="w-full md:w-1/2 h-screen flex items-center justify-center p-8">
         <div className="max-w-xl space-y-12">
           <div className="space-y-4">
-            <h1 className="text-5xl font-light tracking-wide">KLAEV</h1>
+            <Image
+              src={"/logo.png"}
+              width={160}
+              height={100}
+              alt="Klaev logo"
+            />
             <p className="text-xl text-neutral-600">Launching Fall 2025</p>
           </div>
 
