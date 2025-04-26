@@ -3,19 +3,28 @@ import { useState } from "react";
 import { Mail, Phone } from "lucide-react";
 import { toast } from "sonner";
 import { Button } from "./ui/button";
+import { createSignup } from "@/actions/signups";
 
 const SignupForm = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    toast({
-      title: "Welcome to KLAEV",
-      description: "You'll receive a 10% discount code when we launch.",
-    });
-    setEmail("");
-    setPhone("");
+    const response = await createSignup({ email, phone });
+    if (response.success) {
+      toast.success({
+        title: "Welcome to KLAEV",
+        description: "You'll receive a 10% discount code when we launch.",
+      });
+      setEmail("");
+      setPhone("");
+    } else {
+      toast.error({
+        title: "Welcome to KLAEV",
+        description: "You'll receive a 10% discount code when we launch.",
+      });
+    }
   };
 
   return (

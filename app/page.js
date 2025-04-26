@@ -2,6 +2,7 @@ import ImageCarousel from "@/components/ImageCarousel";
 import CountdownTimer from "@/components/CountdownTimer";
 import SignupForm from "@/components/SignupForm";
 import Image from "next/image";
+import WaitListForm from "@/components/waitlist-form";
 
 const Index = () => {
   return (
@@ -29,7 +30,8 @@ const Index = () => {
               Be the first to experience our exclusive collection of minimalist,
               everyday essentials. Sign up now and get 15% off your first order.
             </p>
-            <SignupForm />
+            <WaitListForm />
+            {/* <SignupForm /> */}
           </div>
         </div>
       </div>
