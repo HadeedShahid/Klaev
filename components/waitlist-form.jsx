@@ -34,13 +34,14 @@ const WaitListForm = () => {
     const response = await createSignup(values);
     setLoading(false);
     if (response.success) {
-      toast("Event has been created", {
-        description: "Monday, January 3rd at 6:00pm",
+      toast("Welcome to KLAEV", {
+        description:
+          "Thank you for joining us. Your exclusive 10% launch offer will arrive soon",
       });
       form.reset();
     } else {
-      toast("Event has been created", {
-        description: "Monday, January 3rd at 6:00pm",
+      toast.error("Something went wrong", {
+        description: "Please try again",
       });
     }
   }
@@ -103,6 +104,7 @@ const WaitListForm = () => {
         <Button
           type="submit"
           className="w-full bg-neutral-900 hover:bg-neutral-800 text-white"
+          disabled={loading}
         >
           {loading ? <Loader2 className="animate-spin" /> : <>Get 10% Off</>}
         </Button>
