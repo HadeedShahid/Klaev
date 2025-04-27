@@ -1,10 +1,11 @@
 import ImageCarousel from "@/components/ImageCarousel";
 import CountdownTimer from "@/components/CountdownTimer";
-import SignupForm from "@/components/SignupForm";
 import Image from "next/image";
 import WaitListForm from "@/components/waitlist-form";
+import FormSection from "@/components/FormSection";
 
 const Index = () => {
+  return <FormSection />;
   return (
     <div className="min-h-screen w-full flex flex-col-reverse md:flex-row font-poppins">
       <div className="w-full md:w-1/2 h-screen">
@@ -31,7 +32,6 @@ const Index = () => {
               everyday essentials. Sign up now and get 15% off your first order.
             </p>
             <WaitListForm />
-            {/* <SignupForm /> */}
           </div>
         </div>
       </div>
