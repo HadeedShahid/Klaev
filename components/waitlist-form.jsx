@@ -27,19 +27,24 @@ const WaitListForm = () => {
   });
 
   async function onSubmit(values) {
-    setLoading(true);
-    const response = await createSignup(values);
-    setLoading(false);
-    if (response.success) {
-      toast("Welcome to KLAEV", {
-        description:
-          "Thank you for joining us. Your exclusive 10% launch offer will arrive soon",
-      });
-      form.reset();
-    } else {
-      toast.error("Something went wrong", {
-        description: "Please try again",
-      });
+    try {
+      setLoading(true);
+      const response = await createSignup(values);
+      if (response.success) {
+        toast.success("Welcome to KLAEV", {
+          description:
+            "Thank you for signing up, your 10% launch offer will land in your inbox soon",
+        });
+        form.reset();
+      } else {
+        toast.error("Something went wrong", {
+          description: "Please try again",
+        });
+      }
+    } catch (error) {
+      console.log("signup error: ", error);
+    } finally {
+      setLoading(false);
     }
   }
 
