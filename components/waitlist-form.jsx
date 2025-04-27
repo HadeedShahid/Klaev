@@ -43,6 +43,9 @@ const WaitListForm = () => {
       }
     } catch (error) {
       console.log("signup error: ", error);
+      toast.error("Something went wrong", {
+        description: "Please try again",
+      });
     } finally {
       setLoading(false);
     }
