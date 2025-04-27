@@ -23,7 +23,7 @@ const WaitListForm = () => {
       .string()
       .min(1, { message: "Email is required" })
       .email("Please enter a valid email"),
-    phone: z.string().min(1, { message: "Phone is required" }),
+    phone: z.string(),
   });
 
   async function onSubmit(values) {
@@ -97,7 +97,7 @@ const WaitListForm = () => {
                   <Phone className="absolute left-0 top-2 h-5 w-5 text-neutral-400" />
                   <Input
                     {...field}
-                    placeholder="Phone number"
+                    placeholder="Phone number (optional)"
                     className="w-full pl-8 pr-2 py-2 bg-transparent border-b border-neutral-300 focus:border-neutral-900 outline-none transition-colors"
                   />
                 </div>
