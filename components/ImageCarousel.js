@@ -2,11 +2,11 @@
 import { useState, useEffect } from "react";
 
 const images = [
-  "/image-1.jpg",
-  "/image-2.jpg",
-  "/image-3.jpg",
-  "/image-4.jpg",
-  "/image-5.jpg",
+  "/image-1-min.jpg",
+  "/image-2-min.jpg",
+  "/image-3-min.jpg",
+  "/image-4-min.jpg",
+  "/image-5-min.jpg",
 ];
 
 const ImageCarousel = () => {

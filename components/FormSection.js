@@ -33,7 +33,7 @@ const FormSection = () => {
               <div className="space-y-4">
                 <p className="text-xs text-neutral-600">
                   Be the first to experience our exclusive collection of
-                  minimalist, everyday essentials. Sign up now and get 15% off
+                  minimalist, everyday essentials. Sign up now and get 10% off
                   your first order.
                 </p>
                 <WaitListForm />
