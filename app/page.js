@@ -29,7 +29,7 @@ const Index = () => {
           <div className="space-y-4">
             <p className="text-neutral-600">
               Be the first to experience our exclusive collection of minimalist,
-              everyday essentials. Sign up now and get 15% off your first order.
+              everyday essentials. Sign up now and get 10% off your first order.
             </p>
             <WaitListForm />
           </div>
